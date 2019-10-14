@@ -1,149 +1,142 @@
 //STEP 1
-var favs = ["Pulp Fiction", "Interstellar", "Finding Nemo", "JFK", "The Lobster"];
-console.log("STEP1: Second fav movie is " + favs[1]);
+var favMovies = ["The Arrival", "Predestination", "Forest Gump", "The Dark Knight", "The Silence of the Lambs"];
+window.console.log("Second movie in the array: " + favMovies[1]);
 
 //STEP 2
 var movies = new Array(5);
-movies[0] = "Pulp Fiction";
-movies[1] = "Interstellar";
-movies[2] = "Finding Nemo";
-movies[3] = "JFK";
-movies[4] = "The Lobster";
-console.log("STEP2: First fav movie is " + movies[0]);
+movies[0] = "The Arrival";
+movies[1] = "Predestination";
+movies[2] = "Forest Gump";
+movies[3] = "The Dark Knight";
+movies[4] = "The Silence of the Lambs";
+window.console.log("First movie in the array: " + movies[0]);
 
 //STEP 3
 movies = new Array(5);
-movies[0] = "Pulp Fiction";
-movies[1] = "Interstellar";
-movies[2] = "Finding Nemo";
-movies[3] = "JFK";
-movies[4] = "The Lobster";
-console.log("STEP3: First fav movie is " + movies[0]);
-movies.splice(2, 0, "12 Angry Men");
-console.log("STEP3: Array Length is " + movies.length);
-console.log("STEP3: Array is " + movies);
+movies[0] = "The Arrival";
+movies[1] = "Predestination";
+movies[2] = "Forest Gump";
+movies[3] = "The Dark Knight";
+movies[4] = "The Silence of the Lambs";
+movies.splice(2, 0, "2001: A Space Odyssey");
+window.console.log("Array Length is " + movies.length);
 
 //STEP 4
 movies = [];
-movies[0] = "Pulp Fiction";
-movies[1] = "Interstellar";
-movies[2] = "Finding Nemo";
-movies[3] = "JFK";
-movies[4] = "The Lobster";
-movies.shift();
-console.log("STEP4: Array is " + movies);
+movies[0] = "The Arrival";
+movies[1] = "Predestination";
+movies[2] = "Forest Gump";
+movies[3] = "The Dark Knight";
+movies[4] = "The Silence of the Lambs";
+delete movies[0];
+window.console.log("Modified Array: " + movies);
 
 //STEP 5
 movies = [];
-movies[0] = "Pulp Fiction";
-movies[1] = "Interstellar";
-movies[2] = "Finding Nemo";
-movies[3] = "JFK";
-movies[4] = "The Lobster";
-movies[5] = "12 Angry Men";
-movies[6] = "The Big Lebowski";
+movies[0] = "The Arrival";
+movies[1] = "Predestination";
+movies[2] = "Forest Gump";
+movies[3] = "The Dark Knight";
+movies[4] = "The Silence of the Lambs";
+movies[5] = "2001: A Space Odyssey";
+movies[6] = "The Usual Suspects";
 
-for(var i=0; i<movies.length; ++i){
-    console.log("STEP5: movies[" + i + "]: " + movies[i]);
+for(var i=0; i<  movies.length; i++){
+    window.console.log("Movies array in a for loop: " +movies[i]);
 }
 
 //STEP 6
 movies = [];
-movies[0] = "Pulp Fiction";
-movies[1] = "Interstellar";
-movies[2] = "Finding Nemo";
-movies[3] = "JFK";
-movies[4] = "The Lobster";
-movies[5] = "12 Angry Men";
-movies[6] = "The Big Lebowski";
+movies[0] = "The Arrival";
+movies[1] = "Predestination";
+movies[2] = "Forest Gump";
+movies[3] = "The Dark Knight";
+movies[4] = "The Silence of the Lambs";
+movies[5] = "2001: A Space Odyssey";
+movies[6] = "The Usual Suspects";
 
 for (var i in movies ) {
-    console.log("STEP6: movies[" + i + "]: " + movies[i]);
+    window.console.log("Movies array in a for-in loop: " +movies[i]);
 }
 
 //STEP 7
 movies = [];
-movies[0] = "Pulp Fiction";
-movies[1] = "Interstellar";
-movies[2] = "Finding Nemo";
-movies[3] = "JFK";
-movies[4] = "The Lobster";
-movies[5] = "12 Angry Men";
-movies[6] = "The Big Lebowski";
+movies[0] = "The Arrival";
+movies[1] = "Predestination";
+movies[2] = "Forest Gump";
+movies[3] = "The Dark Knight";
+movies[4] = "The Silence of the Lambs";
+movies[5] = "2001: A Space Odyssey";
+movies[6] = "The Usual Suspects";
 
 for (var i in movies.sort() ) {
-    console.log("STEP7: movies-sorted[" + i + "]: " + movies[i]);
+    console.log("Movies array in a for-in loop(sorted order): " + movies[i]);
 }
 
 //STEP 8
 movies = [];
-movies[0] = "Pulp Fiction";
-movies[1] = "Interstellar";
-movies[2] = "Finding Nemo";
-movies[3] = "JFK";
-movies[4] = "The Lobster";
-movies[5] = "12 Angry Men";
-movies[6] = "The Big Lebowski";
+movies[0] = "The Arrival";
+movies[1] = "Predestination";
+movies[2] = "Forest Gump";
+movies[3] = "The Dark Knight";
+movies[4] = "The Silence of the Lambs";
+movies[5] = "2001: A Space Odyssey";
+movies[6] = "The Usual Suspects";
 
 var leastFavMovies = [];
-leastFavMovies[0] = "Ant Man";
-leastFavMovies[1] = "Army Cooking";
-leastFavMovies[2] = "Fashion";
+leastFavMovies[0] = "The Twilight Saga";
+leastFavMovies[1] = "The Last Airbender";
+leastFavMovies[2] = "Dragon Ball Evolution";
 
-var s = 'Movies I like:';
-s += '\n';
-for(var i=0; i<movies.length; ++i){
-    s += '\n' + movies[i];
+var s = "";
+s += "Movies I like:" +"\n\n";
+for(var i=0; i<movies.length; i++){
+    s += movies[i]+ "\n";
 }
-console.log(s);
-
-s = "Movies I regret watching:";
-s += '\n';
+s += ("..." +"\n\n" );
+s += "Movies I regret watching:" +"\n\n";
 for(var i=0; i<leastFavMovies.length; ++i){
-    s += '\n' + leastFavMovies[i];
+    s +=  leastFavMovies[i] + "\n";
 }
-console.log(s);
+s += "..."
+
+window.console.log(s);
 
 
 //STEP 9
 movies = [];
-movies[0] = "Pulp Fiction";
-movies[1] = "Interstellar";
-movies[2] = "Finding Nemo";
-movies[3] = "JFK";
-movies[4] = "The Lobster";
-movies[5] = "12 Angry Men";
-movies[6] = "The Big Lebowski";
+movies[0] = "The Arrival";
+movies[1] = "Predestination";
+movies[2] = "Forest Gump";
+movies[3] = "The Dark Knight";
+movies[4] = "The Silence of the Lambs";
+movies[5] = "2001: A Space Odyssey";
+movies[6] = "The Usual Suspects";
 
 var leastFavMovies = [];
-leastFavMovies[0] = "Ant Man";
-leastFavMovies[1] = "Army Cooking";
-leastFavMovies[2] = "Fashion";
+leastFavMovies[0] = "The Twilight Saga";
+leastFavMovies[1] = "The Last Airbender";
+leastFavMovies[2] = "Dragon Ball Evolution";
 
 movies = movies.concat(leastFavMovies);
-
-s = "Reverse Sorted Concat:";
-s += '\n';
-for (var i in movies.sort().reverse() ) {
-    s += '\n' + movies[i];
-}
-console.log(s);
+movies.sort().reverse();
+window.console.log("Comcatenated movies list (reverse ordered) "+movies)
 
 //STEP 10
 movies = [];
-movies[0] = "Pulp Fiction";
-movies[1] = "Interstellar";
-movies[2] = "Finding Nemo";
-movies[3] = "JFK";
-movies[4] = "The Lobster";
-movies[5] = "12 Angry Men";
-movies[6] = "The Big Lebowski";
+movies[0] = "The Arrival";
+movies[1] = "Predestination";
+movies[2] = "Forest Gump";
+movies[3] = "The Dark Knight";
+movies[4] = "The Silence of the Lambs";
+movies[5] = "2001: A Space Odyssey";
+movies[6] = "The Usual Suspects";
 
 var leastFavMovies = [];
-leastFavMovies[0] = "Ant Man";
-leastFavMovies[1] = "Army Cooking";
-leastFavMovies[2] = "Fashion";
+leastFavMovies[0] = "The Twilight Saga";
+leastFavMovies[1] = "The Last Airbender";
+leastFavMovies[2] = "Dragon Ball Evolution";
 
 movies = movies.concat(leastFavMovies);
 
-console.log(movies.slice(-1)[0]);
+window.console.log(movies.slice(-1)[0]);
